@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<title>ng-model and ng-bind Directive</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<div data-ng-app="">
+  <h1> Using data-ng-model name </h1>
+  <p>Name: <input type="text" data-ng-model="name1" placeholder="Enter name here"></p>
+  <h2>Hello {{name1}} </h2>
+  <br>
+  <h1>Using data-ng-bind with data-ng-model name</h1>
+  <p>Name: <input type="text" data-ng-model="name2" placeholder="Enter name here"></p>
+  <h2>Hello <span data-ng-bind="name2"></span></h2>
+</div>
+</body>
+</html>

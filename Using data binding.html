@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<div data-ng-app="" data-ng-init="quantity=5;cost=4">
+	<h1>Using data-ng-init, data-ng-model and data-ng-bind for data binding</h1>
+	<table>
+	<tr>
+		<td>Quantity:</td>
+		<td><input type="text" data-ng-model="quantity"></td>
+	</tr>
+	<tr>
+		<td>Cost:</td>
+		<td><input type="text" data-ng-model="cost"></td>
+	</tr>
+	<tr>
+		<td>Total:</td>
+		<td><span data-ng-bind="quantity*cost"></span></td>
+	</tr>
+	</table>
+</div>
+</body>
+</html>

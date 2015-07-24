@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<div data-ng-app="" data-ng-init="fName='Pavitra'">
+	<h1>Using expression</h1>
+	<p> Name: <input type="text" data-ng-model="fName"> </p>
+	<p> You wrote: {{fName}} </p>
+	<h1>Using data-ng-bind</h1>
+	<p> Name: <input type="text" data-ng-model="fName"></p>
+	<p> You wrote: <span data-ng-bind="fName"></span></p>
+</div>
+</body>
+</html>

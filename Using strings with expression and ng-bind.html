@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<div data-ng-app="" data-ng-init="fname='Pavitra';lname='Srinivasan'">
+	<h1>Using expressions</h1>
+	<p> My name is {{fname + " " + lname}}</p>
+	<h1>Using data-ng-bind</h1>
+	<p> My name is <span data-ng-bind="fname+' '+lname"></span></p>
+</div>
+</body>
+</html>
