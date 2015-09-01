@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
+
+    <button data-ng-click="toggle()">Toggle Show</button>
+
+    <p data-ng-show="myVar">
+    First Name: <input type="text" data-ng-model="fName"><br>
+    Last Name: <input type="text" data-ng-model="lName"><br>
+    Full Name: {{fullName()}}
+    </p>
+</div>
+<script>
+    var app=angular.module('myApp',[])
+    app.controller('myCtrl',function($scope) {
+                $scope.fName="Pavitra",
+                $scope.lName="Srinivasan",
+                $scope.myVar=true;
+                $scope.fullName = function() {
+                    return $scope.fName + " " + $scope.lName;
+                }
+                $scope.toggle = function() {
+                    $scope.myVar= !$scope.myVar;
+                }
+    })
+</script>
+</body>
+</html>

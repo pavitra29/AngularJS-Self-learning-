@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<!-- Change the hour value in the init to get different results -->
+<div data-ng-app="" data-ng-init="hour=11">
+    <!-- Based on boolean values -->
+    <p data-ng-show="true">I am visible</p>
+    <p data-ng-show="false">I am invisible</p>
+
+    <!-- Based on conditional values -->
+    <p data-ng-show="hour < 12">I am visible only before 12 am/pm</p>
+</div>
+</body>
+</html>

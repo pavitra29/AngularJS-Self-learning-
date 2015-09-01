@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
+	<ul>
+		<li data-ng-repeat="x in names | orderBy:'country'">
+			{{x.name + ', ' + x.country}}
+		</li>
+	</ul>
+</div>
+<script src="countriesCtrl.js">
+</script>
+</body>
+</html>

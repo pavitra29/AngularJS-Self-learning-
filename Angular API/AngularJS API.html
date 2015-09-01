@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
+    <p>Normal: {{x1}}</p>
+    <p>Lowercase: {{x2}}</p>
+    <p>Uppercase: {{x3}}</p>
+    <p>IsString: {{x4}}</p>
+    <p>IsNumber: {{x5}}</p>
+</div>
+<script>
+    var app=angular.module('myApp',[]);
+    app.controller('myCtrl',function($scope) {
+        $scope.x1="Pavitra";
+        $scope.x2=angular.lowercase($scope.x1);
+        $scope.x3=angular.uppercase($scope.x1);
+        $scope.x4=angular.isString($scope.x1);
+        $scope.x5=angular.isNumber($scope.x1);
+    });
+</script>
+</body>
+</html>

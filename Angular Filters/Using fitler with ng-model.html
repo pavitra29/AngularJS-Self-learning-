@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
+Quantity: <input type="text" data-ng-model="quantity"><br>
+Cost: <input type="text" data-ng-model="cost"><br>
+Total: {{quantity * cost | currency}}
+</div>
+<script src="quantityCtrl.js"></script>
+</body>
+</html>

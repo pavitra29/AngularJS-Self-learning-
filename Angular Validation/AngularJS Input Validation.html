@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<h2>Validation Example</h2>
+<form data-ng-app="myApp" data-ng-controller="myCtrl"
+        name="myForm" novalidate>
+    <p>
+        Username:<br>
+        <input type="text" name="user" data-ng-model="model_user" required>
+        <span style="color: red" data-ng-show="myForm.user.$dirty && myForm.user.$invalid">
+            <span data-ng-show="myForm.user.$error.required">Username is required.</span>
+        </span>
+    </p>
+    <p>
+        Email:<br>
+        <input type="email" name="email" data-ng-model="model_email" required>
+        <span style="color: red" data-ng-show="myForm.email.$dirty && myForm.email.$invalid">
+            <span data-ng-show="myForm.email.$error.required">Email is required.</span>
+            <span data-ng-show="myForm.email.$error.email">Invalid email address.</span>
+        </span>
+    </p>
+    <p>
+        <input type="submit" data-ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">
+    </p>
+</form>
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('myCtrl',function($scope) {
+        $scope.model_user="Pavitra.29";
+        $scope.model_email="psrinivasan@acadian-asset.com";
+    });
+</script>
+</body>
+</html>
